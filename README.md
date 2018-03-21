@@ -12,6 +12,8 @@ choco install minikube
 
 Download the [minikube-windows-amd64.exe](https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe) file, rename it to `minikube.exe` and add it to the path
 
+*Note* - Remember to restart the command prompt after installation.
+
 ### **Linux**
 ``` shell
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
