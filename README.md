@@ -8,7 +8,7 @@
 choco install minikube
 `  
 
-OR  
+***OR***  
 
 Download the [minikube-windows-amd64.exe](https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe) file, rename it to `minikube.exe` and add it to the path
 
