@@ -65,6 +65,7 @@ minikube   Ready     <none>    2h        v1.9.0
 We can define a simple deployment of the Jenkins as given below:
 ```shell
 $ git clone <repo>
+$ cd <repo>
 ```
 We define the deployment of the server in a simple .yaml file - [Jenkins-deployment.yml](https://github.ncsu.edu/khchoksi/Kubernetes-Tech-Talk/blob/master/jenkins-deployment.yml)  
 To create the deployment run the following command:
