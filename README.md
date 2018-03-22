@@ -103,3 +103,18 @@ To get the IP of the VM, just run `minikube ip` .It will give you the IP of the 
 $ minikube ip
 192.168.99.100
 ```
+
+Now, we can access the jenkins server at http://192.168.99.100:30724/
+
+### ssh into the Pod
+First time login into Jenkins UI requires an administrator password, which is available at */var/jenkins_home/secrets/initialAdminPassword*  
+To ssh into the Pod, find the name of the Pod:  
+```shell
+$ kubectl get pods
+NAME                       READY     STATUS    RESTARTS   AGE
+jenkins-6b9f5d55d9-5rbw9   1/1       Running   0          2h
+```
+You can ssh into the Pod, by using the following command: 
+```shell
+kubectl exec -it jenkins-6b9f5d55d9-5rbw9 -- /bin/bash
+```
