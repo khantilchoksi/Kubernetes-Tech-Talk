@@ -42,6 +42,8 @@ If you want to change the VM driver add appropriate `--vm-driver=xxx` flag which
 * [xhyve](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#xhyve-driver) (macOS)
 * [KVM2](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver) (Linux)
 * none (**Linux-only**) - this driver can be used to run the Kubernetes cluster components on the host instead of in a VM. This can be useful for CI workloads which do not support nested virtualization.  
+
+
 At this point a single node Kubernetes environment is running. To get info about the environment you can type:  
 ```shell
 kubectl cluster-info
