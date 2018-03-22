@@ -25,6 +25,7 @@ chmod +x minikube && sudo mv minikube /usr/local/bin/
 brew cask install minikube
 ```
 
+
 ## Quick Start
 To start minikube simply invoke `minikube start`. If you want to change the VM driver add appropriate `--vm-driver=xxx` flag which supports the following list of drivers:
 * [virtualbox](https://www.virtualbox.org/wiki/Downloads) (Windows)
