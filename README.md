@@ -15,19 +15,18 @@ Download the [minikube-windows-amd64.exe](https://storage.googleapis.com/minikub
 
 *Note* - Remember to restart the command prompt after installation.
 
-### **Linux**
+#### **Linux**
 ``` shell
 $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 $ chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
 
-### **macOS**
+#### **macOS**
 ```shell
 $ brew cask install virtualbox
 $ brew install kubectl
 $ brew cask install minikube
 ```
-
 
 To find out if **minikube** is installed properly and its version, type `minikube version` and `kubectl version`. 
 
@@ -138,6 +137,6 @@ Using this, we can setup the Jenkins profile.
 
 * [Screencast & Demo]()  
 -------------------------------------------  
-## REFERENCES  
+## References
  * https://kubernetes.io/docs/tutorials/kubernetes-basics/
  * http://www.monkeylittle.com/blog/2017/02/07/deploying-jenkins-with-kubernetes.html   
