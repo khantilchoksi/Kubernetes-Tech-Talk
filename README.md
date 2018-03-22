@@ -1,6 +1,8 @@
 # Kubernetes-Tech-Talk
+In this demo, we will see how we can use Kubernetes to deploy and auto-scale Jenkins server quickly.  
 
 ## What is MiniKube?
+
 
 ## Installation
 ### **Windows**  
@@ -57,4 +59,47 @@ To get info about the nodes running in the environment you can type `kubectl get
 ```shell
 NAME       STATUS    ROLES     AGE       VERSION
 minikube   Ready     <none>    2h        v1.9.0
+```
+
+### Deploying Jenkins server
+We can define a simple deployment of the Jenkins as given below:
+```shell
+git clone <repo>
+```
+We define the deployment of the server in a simple .yaml file - [Jenkins-deployment.yml](https://github.ncsu.edu/khchoksi/Kubernetes-Tech-Talk/blob/master/jenkins-deployment.yml)  
+To create the deployment run the following command:
+```shell
+kubectl create -f jenkins-deployment.yaml
+```
+
+To validate that the deployment was successful, run: 
+```shell
+kubectl get deployments
+```
+We can see that a single pod has been created that has the Jenkins image by invoking:
+```shell
+kubectl get pods
+```
+
+### Accessing Jenkins
+Now that we have a Jenkins instance deployed in a pod, we need to make it accessible from the outside the Kubernetes cluster. The Jenkins Pod has been assigned an IP which is internal to the Kubernetes cluster. We need to expose this Pod to using a service called *NodePort*. A *NodePort* service type exposes a service on a port on each node in the cluster.  
+To create the service, run:
+```shell
+kubectl create -f jenkins-service.yml
+```
+To validate that the service was created successfully, run:
+```shell
+kubectl get services
+```
+It should give you an output like:
+```shell
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+jenkins      NodePort    10.103.189.22   <none>        8080:30724/TCP   1h
+kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP          3h
+```
+From this output we can see port 8080 has been exposed on the port 30724 for *jenkins* service.  
+To get the IP of the VM, just run `minikube ip` .It will give you the IP of the running cluster. 
+```shell
+$ minikube ip
+192.168.99.100
 ```
