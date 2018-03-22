@@ -1,5 +1,9 @@
 # Kubernetes-Tech-Talk
-In this demo, we will see how we can use Kubernetes to deploy Jenkins server quickly.  
+In this demo, we will see how we can use Kubernetes to deploy Jenkins server quickly.   
+
+--------------------------------------------  
+## [Screencast / Demo](https://youtu.be/MIQbGaCEjcs) || [Kubernetes Tool Report](https://github.ncsu.edu/khchoksi/Kubernetes-Tech-Talk/blob/master/tool%20report.pdf) || [Presentation Slides](https://docs.google.com/presentation/d/13Lk79W5-gOIEYaQgtc6N0rfArAqNGoUbMsFxRBz2HNg/edit?usp=sharing)
+------------------------------------------------- 
 
 ## What is MiniKube?
 Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
