@@ -46,7 +46,15 @@ If you want to change the VM driver add appropriate `--vm-driver=xxx` flag which
 * none (**Linux-only**) - this driver can be used to run the Kubernetes cluster components on the host instead of in a VM. This can be useful for CI workloads which do not support nested virtualization.  
 
 
-At this point a single node Kubernetes environment is running. To get info about the environment you can type:  
+At this point a single node Kubernetes environment is running. To verify you can run `minikube status` and you should something similar to following output:
 ```shell
-kubectl cluster-info
+minikube: Running
+cluster: Running
+kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100
+```
+From here onwards, we will be interacting with Kubernetes environment using `kubectl` command.  
+To get info about the nodes running in the environment you can type `kubectl get nodes` and you can see all the nodes running:  
+```shell
+NAME       STATUS    ROLES     AGE       VERSION
+minikube   Ready     <none>    2h        v1.9.0
 ```
