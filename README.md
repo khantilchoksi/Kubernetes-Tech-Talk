@@ -22,8 +22,11 @@ chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 ### **macOS**
 ```shell
+brew cask install virtualbox
+brew install kubectl
 brew cask install minikube
 ```
+
 
 
 ## Quick Start
