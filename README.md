@@ -133,7 +133,7 @@ Using this, we can setup the Jenkins profile.
 -----------------------------------------------  
 ## Quick Links  
 
-* [Tool Report](too%20report.pdf)
+* [Tool Report](https://github.ncsu.edu/khchoksi/Kubernetes-Tech-Talk/blob/master/tool%20report.pdf)
 
 * [Screencast & Demo](https://youtu.be/MIQbGaCEjcs)  
 -------------------------------------------  
