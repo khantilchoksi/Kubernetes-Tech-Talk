@@ -32,11 +32,17 @@ To find out if **minikube** is installed properly and its version, type `minikub
 
 
 ## Quick Start
-To start minikube simply invoke `minikube start`. If you want to change the VM driver add appropriate `--vm-driver=xxx` flag which supports the following list of drivers:
+To start minikube simply invoke  
+`minikube start`  
+If you want to change the VM driver add appropriate `--vm-driver=xxx` flag which supports the following list of drivers:
 * [virtualbox](https://www.virtualbox.org/wiki/Downloads) (Windows)
 * [hyperv](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperV-driver) (Windows)
 * [vmwarefusion](https://www.vmware.com/products/fusion) (macOS)
 * [hyperkit](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver) (macOS)
 * [xhyve](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#xhyve-driver) (macOS)
 * [KVM2](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver) (Linux)
-* none (**Linux-only**) - this driver can be used to run the Kubernetes cluster components on the host instead of in a VM. This can be useful for CI workloads which do not support nested virtualization.
+* none (**Linux-only**) - this driver can be used to run the Kubernetes cluster components on the host instead of in a VM. This can be useful for CI workloads which do not support nested virtualization.  
+At this point a single node Kubernetes environment is running. To get info about the environment you can type:  
+```shell
+kubectl cluster-info
+```
