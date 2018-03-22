@@ -134,7 +134,7 @@ Using this, we can setup the Jenkins profile.
 -----------------------------------------------  
 ## Quick Links  
 
-* [TOOL REPORT](/tool report.pdf)  
+* [Tool Report](too_report.pdf)
 
 * [Screencast & Demo]()  
 -------------------------------------------  
