@@ -9,7 +9,6 @@ Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a
 `
 $ choco install minikube
 `  
-
 *OR*  
 
 Download the [minikube-windows-amd64.exe](https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe) file, rename it to `minikube.exe` and add it to the path
@@ -32,6 +31,7 @@ $ brew cask install minikube
 
 To find out if **minikube** is installed properly and its version, type `minikube version` and `kubectl version`. 
 
+--------------------------------------------------------------------------------------------------  
 
 ## Quick Start
 To start minikube simply invoke  
@@ -61,6 +61,8 @@ NAME       STATUS    ROLES     AGE       VERSION
 minikube   Ready     <none>    2h        v1.9.0
 ```
 
+--------------------------------------------------------------------  
+
 ### Deploying Jenkins server
 We can define a simple deployment of the Jenkins as given below:
 ```shell
@@ -82,7 +84,9 @@ We can see that a single pod has been created that has the Jenkins image by invo
 $ kubectl get pods
 ```
 
-### Accessing Jenkins
+----------------------------------------------------------  
+
+## Accessing Jenkins
 Now that we have a Jenkins instance deployed in a pod, we need to make it accessible from the outside the Kubernetes cluster. The Jenkins Pod has been assigned an IP which is internal to the Kubernetes cluster. We need to expose this Pod to using a service called *NodePort*. A *NodePort* service type exposes a service on a port on each node in the cluster.  
 To create the service, run:
 ```shell
@@ -107,7 +111,9 @@ $ minikube ip
 
 Now, we can access the jenkins server at http://192.168.99.100:30724/
 
-### ssh into the Pod
+----------------------------------------------------------------------  
+
+## SSH into the Pod
 First time login into Jenkins UI requires an administrator password, which is available at */var/jenkins_home/secrets/initialAdminPassword*  
 To ssh into the Pod, find the name of the Pod:  
 ```shell
@@ -124,3 +130,14 @@ This will log you into the Pod and you can find the password from within:
 jenkins@jenkins-6b9f5d55d9-5rbw9:/$ cat /var/jenkins_home/secrets/initialAdminPassword 
 ```
 Using this, we can setup the Jenkins profile.
+
+-----------------------------------------------  
+## Quick Links  
+
+* [TOOL REPORT](/tool report.pdf)  
+
+* [Screencast & Demo]()  
+-------------------------------------------  
+## REFERENCES  
+ * https://kubernetes.io/docs/tutorials/kubernetes-basics/
+ * http://www.monkeylittle.com/blog/2017/02/07/deploying-jenkins-with-kubernetes.html   
