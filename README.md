@@ -33,7 +33,9 @@ To find out if **minikube** is installed properly and its version, type `minikub
 
 ## Quick Start
 To start minikube simply invoke  
-`minikube start`  
+```shell 
+minikube start
+```  
 If you want to change the VM driver add appropriate `--vm-driver=xxx` flag which supports the following list of drivers:
 * [virtualbox](https://www.virtualbox.org/wiki/Downloads) (Windows)
 * [hyperv](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperV-driver) (Windows)
